@@ -71,19 +71,17 @@ class FlxHitbox extends FlxSpriteGroup
 		hint.alpha = 0.00001;
 		hint.onDown.callback = function()
 		{
-			if (hint.alpha != AndroidControls.getOpacity(true))
-				hint.alpha = AndroidControls.getOpacity(true);
+			hint.alpha = AndroidControls.getOpacity(true);
 		}
 		hint.onUp.callback = function()
 		{
-			if (hint.alpha != 0.00001)
-				hint.alpha = 0.00001;
+			hint.alpha = 0.00001;
 		}
-		hint.onOut.callback = function()
+		/*hint.onOut.callback = function()
 		{
 			if (hint.alpha != 0.00001)
 				hint.alpha = 0.00001;
-		}
+		}*/
 		#if FLX_DEBUG
 		hint.ignoreDrawDebug = true;
 		#end
